@@ -2,7 +2,7 @@
 #include "HAL_GPIO.h"
 
 
-/*int main()
+int main()
 {
 	// Enablbe APB2 clock
 	RCC->APB2ENR |= 0x1U<<4;
@@ -17,7 +17,7 @@
 		GPIOC->BSRR = (0x1U<<(13+16));
 		delay((uint32_t)128);
 	}
-}*/
+}
 int main()
 {
 	GPIO_TYPE gpio;
