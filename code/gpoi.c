@@ -2,11 +2,11 @@
 #include "HAL_GPIO.h"
 
 
-/*int main()
+int main()
 {
-	// Enablbe APB2 clock
+	// Enablbe APB2 clock //
 	RCC->APB2ENR |= 0x1U<<4;
-	//Configure pin portc
+	//Configure pin portc //
 	GPIOC->CRH |= (~(0x1U<<21) | 0x1U<<20);	//Output mode, max speed 10 MHz.
 	GPIOC->CRH &= (~(0x3U<<22)); 
 	while(1)
@@ -17,7 +17,7 @@
 		GPIOC->BSRR = (0x1U<<(13+16));
 		delay((uint32_t)128);
 	}
-}*/
+}
 int main()
 {
 	GPIO_TYPE gpio;
