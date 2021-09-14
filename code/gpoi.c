@@ -5,7 +5,7 @@
 int main()
 {
 	RCC->APB2ENR |= 0x1U<<4;
-	//Configure pin portc //
+	//Configure pin portc  //
 	GPIOC->CRH |= (~(0x1U<<21) | 0x1U<<20);	//Output mode, max speed 10 MHz.
 	GPIOC->CRH &= (~(0x3U<<22)); 
 	while(1)
