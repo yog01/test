@@ -4,7 +4,7 @@
 
 int main()
 {
-	// Enablbe APB2 clock //
+	// Enablbe APB2 clock by left shift by four//
 	RCC->APB2ENR |= 0x1U<<4;
 	//Configure pin portc  //
 	GPIOC->CRH |= (~(0x1U<<21) | 0x1U<<20);	//Output mode, max speed 10 MHz.
