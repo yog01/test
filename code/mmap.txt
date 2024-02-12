@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <sys/mman.h>
+#include <stdlib.h>
+#define SIZE 10
+int main()
+{
+   int *ptr=NULL,i=0,chk;
+   
+   ptr=mmap(NULL,SIZE,PROT_READ|PROT_WRITE,MAP_SHARED|MAP_ANONYMOUS,0,0);
+   if(!ptr)
+   {
+       perror("fail shared memory\n");
+       return EXIT_FAILURE;
+   }
+   
+   for(i=0;i<SIZE;++i)
+   {
+       ptr[i]=i;
+   }
+   
+   for(i=0;i<SIZE;++i)
+   {
+       printf("%d",ptr[i]);
+   }
+   
+   chk=munmap(NULL,SIZE);
+   if(chk<0)
+   {
+       perror("memory delete fail\n");
+       return EXIT_FAILURE;
+   }
+    return 0;
+}
