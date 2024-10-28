@@ -3,8 +3,8 @@
 
 #include"stm32f10x.h"
 
-#define HIGH 1
-#define LOW  0
+#define   HIGH 1
+#define   LOW  0
 
 #define PORTA GPIOA
 #define PORTB GPIOB
