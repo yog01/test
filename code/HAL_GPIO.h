@@ -67,7 +67,7 @@
 
 
 //Intereut mask register for pin
-#define EXT_INT_PIN_EN (EXTI->IMR |= ((uint32_t)0x1<<pinNum))
+#define  EXT_INT_PIN_EN (EXTI->IMR |= ((uint32_t)0x1<<pinNum))
 //Rising tigger selection register
 #define RISE_TIG_PIN_EN (EXTI->RTSR |= ((uint32_t)0x1<<pinNum))
 //Falling edge selection regidter 
