@@ -4,10 +4,10 @@
 #define SIZE 10
 int main()
 {
-   int *ptr=NULL,i=0,chk;
+   int *ptr = NULL,i=0,chk = 0;
    
    ptr=mmap(NULL,SIZE,PROT_READ|PROT_WRITE,MAP_SHARED|MAP_ANONYMOUS,0,0);
-   if(!ptr)
+   if( !ptr )
    {
        perror("fail shared memory\n");
        return EXIT_FAILURE;
