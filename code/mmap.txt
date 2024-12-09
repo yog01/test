@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <sys/mman.h>
 #include <stdlib.h>
-#define SIZE 10
+#define SIZE 11
 int main()
 {
    int *ptr=NULL,i=0,chk=0;
