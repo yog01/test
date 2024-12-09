@@ -4,7 +4,7 @@
 #define SIZE 11
 int main()
 {
-   int *ptr=NULL,i=0,chk=0;
+   int *ptr=NULL,i=0,chk;
    
    ptr=mmap(NULL,SIZE,PROT_READ|PROT_WRITE,MAP_SHARED|MAP_ANONYMOUS,0,0);
    if(!ptr)
