@@ -20,6 +20,7 @@ int main()
 }
 int main()
 {
+	int i=0;
 	GPIO_TYPE gpio;
 	gpio.port = PORTC;
 	//gpio.Init = GPIOC;
@@ -38,7 +39,7 @@ int main()
   while(1)
 	{
 		gpio_toggle(PORTC,13);
-		for(int i=0; i<1000;i++);
+		for(i=0; i<1000;i++);
 		//gpio_write(PORTC,13,HIGH);
 		delay(100);
 	}
