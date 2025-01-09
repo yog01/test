@@ -4,23 +4,25 @@
 #define SIZE 11
 int main()
 {
-   int *ptr=NULL,i=0,chk;
+   int *ptr=NULL,i=0,chk=0;
    
    ptr=mmap(NULL,SIZE,PROT_READ|PROT_WRITE,MAP_SHARED|MAP_ANONYMOUS,0,0);
-   if(!ptr)
+   if(ptr==NULL)
    {
        perror("fail shared memory\n");
        return EXIT_FAILURE;
+   }else{
+	printf("address:%p\n",ptr);	
    }
    
    for(i=0;i<SIZE;++i)
    {
-       ptr[i]=i;
+       *(ptr+i)=i;
    }
    
    for(i=0;i<SIZE;++i)
    {
-       printf("%d",ptr[i]);
+       printf("index %d %d\n",i,ptr[i]);
    }
    
    chk=munmap(NULL,SIZE);
