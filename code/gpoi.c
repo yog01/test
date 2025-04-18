@@ -12,6 +12,7 @@ int main()
 	while(1)
 	{
 		//set bit 13
+		//Set gpio pin 13
 		GPIOC->BSRR = (0x1U<<13);
 		delay((uint32_t)128);
 		GPIOC->BSRR = (0x1U<<(13+16));

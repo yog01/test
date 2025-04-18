@@ -1,1 +1,30 @@
 microcontroller stm32f407
+
+RCC->AHB1ENR|=(0x01U<<2);
+
+GPIOC->MODER|=(~(0x01U<<27)|(0x01U<<26));
+
+while(1){
+	GPIOC->BSRR=(0x01U<<29);
+	delay(1000);
+	GPIOC->BSRR=(0x01U<<13);
+	delay(1000);
+}
+
+------
+
+GPIO_TYPE gpio;
+
+gpio.mode=OUTPUT_MODE;
+gpio.modetype=OUTPUT_MODE_CONF_PP;
+gpio.port=PORTC;
+gpio.speed=GPIO_MODE_10_MHZ;
+gpio.pin=13;
+
+gpioInit(gpio);
+
+while(1){
+gpio_toggle(PORTC,13);
+for(i=0;i<1000;++i)
+delay(100);
+}
