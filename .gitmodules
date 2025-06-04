@@ -1,0 +1,4 @@
+[submodule "test1/test"]
+	path = test1/test
+	url = https://github.com/yog01/test.git
+	branch = feature
