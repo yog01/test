@@ -6,9 +6,9 @@ GPIOC->MODER|=(~(0x01U<<27)|(0x01U<<26));
 
 while(1){
 	GPIOC->BSRR=(0x01U<<29);
-	delay(1000);
+	delay(2000);
 	GPIOC->BSRR=(0x01U<<13);
-	delay(1000);
+	delay(2000);
 }
 
 ------
