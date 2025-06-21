@@ -25,6 +25,6 @@ gpioInit(gpio);
 
 while(1){
 gpio_toggle(PORTC,13);
-for(i=0;i<1000;++i)
+for(i=0;i<2000;++i)
 delay(100);
 }
