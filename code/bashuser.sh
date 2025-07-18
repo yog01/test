@@ -11,8 +11,14 @@ disp(){
 printf "enter number"
 read a
 
+case $a in
+	'') a=`pwd`;;
+	* ) echo "Invalid" ;;
+esac
+
 if [ $a -eq 10 ]; then
 disp "equal $a";
 else
 error $a;
 fi
+echo "read value:$a"
