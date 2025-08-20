@@ -19,7 +19,7 @@ int main()
 		delay((uint32_t)128);
 	}
 }
-int main()
+/*int main()
 {
 	int i=0;
 	GPIO_TYPE gpio;
@@ -45,7 +45,7 @@ int main()
 		delay(100);
 	}
 	return 0;
-}
+}*/
 
 /*void EXTI0_IRQHandler(void)
 {
