@@ -6,3 +6,7 @@
 	path = projsubmodule/c_program
 	url = https://github.com/yog01/c_program.git
 	branch = feature
+[submodule "moduletst2/test"]
+	path = moduletst2/test
+	url = https://github.com/yog01/test.git
+	branch = feature
