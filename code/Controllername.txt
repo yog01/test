@@ -1,4 +1,4 @@
-microcontroller stm32f407
+microcontroller:stm32f407:
 
 RCC->AHB1ENR|=(0x01U<<2);
 
