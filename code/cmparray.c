@@ -18,7 +18,7 @@ int main()
     }else if(cond>0){
         printf("const is bigger\n");
     }else{
-        printf("equal\n");
+        printf("strings are equal\n");
     }
     
     printf("word %c data %d\n",*ptr,cond);
