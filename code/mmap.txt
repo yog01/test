@@ -2,7 +2,7 @@
 #include <sys/mman.h>
 #include <stdlib.h>
 #define SIZE 11
-int main()
+int main(int argc,char *argv[])
 {
 
    int *ptr=NULL,i=0,chk=0;
